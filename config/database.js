@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// const MONGO_URL = "mongodb://localhost:27017/Recipe_Sharing";
+// const MONGO_URL = "mongodb://localhost:27017/Recipe_Sharing"; // Localhost
 const MONGO_URL = "mongodb+srv://harisdevcodes:NnzlJjJUXEIozSVP@muhammadharis.8qkyi.mongodb.net/";
 
 const mongoConnect = async (callback) => {
