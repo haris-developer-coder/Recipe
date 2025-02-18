@@ -33,8 +33,7 @@ app.use((req, res, next) => {
   return res.status(404).json({
     status: 404,
     error: null,
-    message: 'Not Found',
-    data: {}
+    message: 'Not Found'
   });
 });
 
