@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 var recipeRouter = require('./routes/recipe');
 var ratingRouter = require('./routes/rating');
 var likesRouter = require('./routes/likes');
+var indexRouter = require('./routes/index');
 
 var app = express();
 
@@ -19,15 +20,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
+app.use(indexRouter);
 app.use(usersRouter);
 app.use(recipeRouter);
 app.use(ratingRouter);
 app.use(likesRouter);
 
 //Cron Jobs
-cron.schedule('*/10 * * * *', () => {
-  cronJobs.deleteDataAfter10Minutes();
-});
+// cron.schedule('*/10 * * * *', () => {
+//   cronJobs.deleteDataAfter10Minutes();
+// });
 
 app.use((req, res, next) => {
   return res.status(404).json({
