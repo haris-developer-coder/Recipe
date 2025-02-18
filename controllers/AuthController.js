@@ -24,6 +24,8 @@ exports.Register = async (req, res, next) => {
     const { name, email, password, mobile, gender, social_links, country, state, city, postal_code, availability, certifications, specialty, experience, role } = req.body;
     
     try{
+        console.log(req.body);
+        return;
         if(role == 'user')
         {
             if(

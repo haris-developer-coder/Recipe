@@ -5,10 +5,7 @@ const MONGO_URL = "mongodb+srv://harisdevcodes:NnzlJjJUXEIozSVP@muhammadharis.8q
 
 const mongoConnect = async (callback) => {
     try{
-        await mongoose.connect(MONGO_URL, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        });
+        await mongoose.connect(MONGO_URL);
         console.log('Connected to MongoDB with Mongoose');
         callback();
     }
