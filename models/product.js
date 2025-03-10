@@ -1,3 +1,5 @@
+const mongose = require('mongoose');
+
 const Product_Data = mongose.Schema(
     {
         pro_name: { type: String, required: true },
