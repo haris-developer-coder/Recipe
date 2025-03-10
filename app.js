@@ -11,6 +11,7 @@ var recipeRouter = require('./routes/recipe');
 var ratingRouter = require('./routes/rating');
 var likesRouter = require('./routes/likes');
 var indexRouter = require('./routes/index');
+var productRouter = require('./routes/product');
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use(usersRouter);
 app.use(recipeRouter);
 app.use(ratingRouter);
 app.use(likesRouter);
+app.use(productRouter);
 
 //Cron Jobs
 // cron.schedule('*/10 * * * *', () => {
