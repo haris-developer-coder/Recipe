@@ -26,7 +26,7 @@ app.use(usersRouter);
 app.use(recipeRouter);
 app.use(ratingRouter);
 app.use(likesRouter);
-app.use(productRouter);
+app.use('/product', productRouter);
 
 //Cron Jobs
 // cron.schedule('*/10 * * * *', () => {
